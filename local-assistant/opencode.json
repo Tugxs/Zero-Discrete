@@ -1,0 +1,55 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "ollama/zero-discrete",
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Local Ollama",
+      "options": {
+        "baseURL": "http://127.0.0.1:11434/v1"
+      },
+      "models": {
+        "qwen3.5:4b": {
+          "name": "Local Vision 4B",
+          "limit": {
+            "context": 65536,
+            "output": 8192
+          }
+        },
+        "qwen3-coder:30b": {
+          "name": "Local Coder 30B (slower on 8GB GPU)",
+          "limit": {
+            "context": 65536,
+            "output": 8192
+          }
+        },
+        "zero-discrete": {
+          "name": "Zero Discrete - Local Vision",
+          "limit": {
+            "output": 8192,
+            "context": 65536
+          },
+          "modalities": {
+            "output": [
+              "text"
+            ],
+            "input": [
+              "text",
+              "image"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "permission": {
+    "bash": "ask",
+    "edit": "ask",
+    "webfetch": "ask",
+    "external_directory": "ask"
+  },
+  "share": "disabled",
+  "instructions": [
+    "PROJECT-HANDOFF.md"
+  ]
+}
