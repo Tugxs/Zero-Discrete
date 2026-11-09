@@ -61,18 +61,18 @@
       "command": [
         "cmd.exe",
         "/c",
-        "{env:LOCALAPPDATA}\\Roblox\\mcp.bat"
+        "%LOCALAPPDATA%\\Roblox\\mcp.bat"
       ],
       "type": "local",
       "timeout": 20000
     }
   },
   "tools": {
+    "roblox_*": false,
+    "roblox_list_roblox_studios": true,
+    "roblox_get_studio_state": true,
     "roblox_search_game_tree": true,
     "roblox_script_read": true,
-    "roblox_list_roblox_studios": true,
-    "roblox_*": false,
-    "roblox_get_studio_state": true,
     "roblox_script_search": true,
     "roblox_script_grep": true
   }
