@@ -4,3 +4,5 @@ models/
 .env
 .env.*
 private/
+
+qa/
